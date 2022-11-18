@@ -1,0 +1,39 @@
+{
+  "Maintenance": {
+    "Engine": {
+      "Additive": [],
+      "EngineOil": [],
+      "GearOil": [],
+      "Battery": []
+    },
+    "Break": {
+      "BreakFluid": [],
+      "BreakPad": []
+    },
+    "Filter": {
+      "Air-Filter": [],
+      "Oil-Filter": []
+    }
+  },
+  "Tires": {
+    "Bridgestone": [],
+    "Michelin": [],
+    "Toyo-Tires": []
+  },
+  "Wheels": {
+    "ATS": [],
+    "BBS": [],
+    "OZRacing": []
+  },
+  "Parts-and-Accessories": {
+    "Car-Lights": {
+      "CARMATE-Light": [],
+      "HELLA": [],
+      "COBRA": []
+    },
+    "Dash-Cams": {
+      "DDPAI-Dashcams": [],
+      "TRANSCEND": []
+    }
+  }
+}
