@@ -1,5 +1,6 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
+import styles from "../../../styles/Header.module.css";
 
 const Wheels = function () {
   const [openWheels, setOpenWheels] = useState(false);
@@ -7,7 +8,7 @@ const Wheels = function () {
     <>
       <div
         onClick={() => setOpenWheels(!openWheels)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-lg mr-3">Wheels</p>
         {openWheels ? <BsChevronUp size={15} /> : <BsChevronDown size={15} />}
@@ -17,15 +18,9 @@ const Wheels = function () {
           openWheels ? "absolute" : "hidden"
         }`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          ATS
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          BBS
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          OZ Racing
-        </li>
+        <li className={styles.link_hover}>ATS</li>
+        <li className={styles.link_hover}>BBS</li>
+        <li className={styles.link_hover}>OZ Racing</li>
       </ul>
     </>
   );

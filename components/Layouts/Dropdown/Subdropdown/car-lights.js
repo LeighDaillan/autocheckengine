@@ -1,5 +1,6 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
+import styles from "../../../../styles/Header.module.css";
 
 const CarLights = function () {
   const [openCarLights, setOpenCarLights] = useState(false);
@@ -7,7 +8,7 @@ const CarLights = function () {
     <>
       <div
         onClick={() => setOpenCarLights(!openCarLights)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-sm mr-3">Car Lights</p>
         {openCarLights ? (
@@ -21,15 +22,9 @@ const CarLights = function () {
           openCarLights ? "relative" : "hidden"
         }`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          CARMATE Light
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          HELLA
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          COBRA
-        </li>
+        <li className={styles.link_hover}>CARMATE Light</li>
+        <li className={styles.link_hover}>HELLA</li>
+        <li className={styles.link_hover}>COBRA</li>
       </ul>
     </>
   );

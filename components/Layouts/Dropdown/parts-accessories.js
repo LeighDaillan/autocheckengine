@@ -2,6 +2,7 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import CarLights from "./Subdropdown/car-lights";
 import DashCams from "./Subdropdown/dash-cams";
+import styles from "../../../styles/Header.module.css";
 
 const PartsAccecssories = function () {
   const [openPartsAccecssories, setOpenPartsAccecssories] = useState(false);
@@ -9,7 +10,7 @@ const PartsAccecssories = function () {
     <>
       <div
         onClick={() => setOpenPartsAccecssories(!openPartsAccecssories)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-lg mr-3">Parts and Accessories</p>
         {openPartsAccecssories ? (
@@ -23,10 +24,10 @@ const PartsAccecssories = function () {
           openPartsAccecssories ? "absolute" : "hidden"
         }`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
+        <li className={styles.link_hover}>
           <CarLights />
         </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
+        <li className={styles.link_hover}>
           <DashCams />
         </li>
       </ul>

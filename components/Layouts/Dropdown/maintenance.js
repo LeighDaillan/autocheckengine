@@ -3,6 +3,7 @@ import { useState } from "react";
 import Engine from "./Subdropdown/engine";
 import Break from "./Subdropdown/break";
 import Filter from "./Subdropdown/filter";
+import styles from "../../../styles/Header.module.css";
 
 const Maintenance = function () {
   const [openMaintenance, setOpenMaintenance] = useState(false);
@@ -10,7 +11,7 @@ const Maintenance = function () {
     <>
       <div
         onClick={() => setOpenMaintenance(!openMaintenance)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-lg mr-3">Maintenance</p>
         {openMaintenance ? (
@@ -24,13 +25,13 @@ const Maintenance = function () {
           openMaintenance ? "absolute" : "hidden"
         }`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
+        <li className={styles.link_hover}>
           <Engine />
         </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
+        <li className={styles.link_hover}>
           <Break />
         </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
+        <li className={styles.link_hover}>
           <Filter />
         </li>
       </ul>

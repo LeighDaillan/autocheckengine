@@ -1,5 +1,6 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
+import styles from "../../../styles/Header.module.css";
 
 const Tires = function () {
   const [openTires, setOpenTires] = useState(false);
@@ -7,7 +8,7 @@ const Tires = function () {
     <>
       <div
         onClick={() => setOpenTires(!openTires)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-lg mr-3">Tires</p>
         {openTires ? <BsChevronUp size={15} /> : <BsChevronDown size={15} />}
@@ -17,15 +18,9 @@ const Tires = function () {
           openTires ? "absolute" : "hidden"
         }`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Bridgestone
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Michelin
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Toyo Tires
-        </li>
+        <li className={styles.link_hover}>Bridgestone</li>
+        <li className={styles.link_hover}>Michelin</li>
+        <li className={styles.link_hover}>Toyo Tires</li>
       </ul>
     </>
   );

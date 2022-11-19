@@ -1,5 +1,6 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
+import styles from "../../../../styles/Header.module.css";
 
 const Engine = function () {
   const [openEngine, setOpenEngine] = useState(false);
@@ -7,7 +8,7 @@ const Engine = function () {
     <>
       <div
         onClick={() => setOpenEngine(!openEngine)}
-        className="cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center rounded"
+        className={styles.link_dropdown}
       >
         <p className="text-sm mr-3">Engine</p>
         {openEngine ? <BsChevronUp size={15} /> : <BsChevronDown size={15} />}
@@ -15,18 +16,10 @@ const Engine = function () {
       <ul
         className={`bg-white mt-2 px-5 ${openEngine ? "relative" : "hidden"}`}
       >
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Additive
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Engine Oil
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Gear Oil
-        </li>
-        <li className="p-2 text-sm text-gray-600 hover:text-black cursor-pointer">
-          Battery
-        </li>
+        <li className={styles.link_hover}>Additive</li>
+        <li className={styles.link_hover}>Engine Oil</li>
+        <li className={styles.link_hover}>Gear Oil</li>
+        <li className={styles.link_hover}>Battery</li>
       </ul>
     </>
   );
