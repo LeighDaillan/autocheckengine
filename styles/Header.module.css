@@ -1,0 +1,7 @@
+.link_dropdown {
+  @apply cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded;
+}
+
+.link_hover {
+  @apply p-2 text-sm text-gray-600 hover:text-black cursor-pointer;
+}
