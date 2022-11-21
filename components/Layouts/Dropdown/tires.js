@@ -1,6 +1,7 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import styles from "../../../styles/Header.module.css";
+import Link from "next/link";
 
 const Tires = function () {
   const [openTires, setOpenTires] = useState(false);
@@ -18,9 +19,15 @@ const Tires = function () {
           openTires ? "absolute" : "hidden"
         }`}
       >
-        <li className={styles.link_hover}>Bridgestone</li>
-        <li className={styles.link_hover}>Michelin</li>
-        <li className={styles.link_hover}>Toyo Tires</li>
+        <li className={styles.link_hover}>
+          <Link href="/Tires/bridgestone">Bridgestone</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Tires/michelin">Michelin</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Tires/toyo-tires">Toyo Tires</Link>
+        </li>
       </ul>
     </>
   );
