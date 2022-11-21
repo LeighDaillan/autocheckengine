@@ -2,7 +2,6 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import Engine from "./Subdropdown/engine";
 import Break from "./Subdropdown/break";
-import Filter from "./Subdropdown/filter";
 import styles from "../../../styles/Header.module.css";
 
 const Maintenance = function () {
@@ -30,9 +29,6 @@ const Maintenance = function () {
         </li>
         <li className={styles.link_hover}>
           <Break />
-        </li>
-        <li className={styles.link_hover}>
-          <Filter />
         </li>
       </ul>
     </>
