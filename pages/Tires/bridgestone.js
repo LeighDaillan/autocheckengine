@@ -10,11 +10,14 @@ const Bridgestone = function ({ bridgestoneData }) {
         height="205"
         priority
         alt="Bridgestone Logo"
-        className="mx-auto"
+        className="mx-auto w-auto h-auto"
       />
 
       <main className="max-w-7xl mx-auto grid gap-5 grid-cols-4 mb-20">
-        <DisplayCard product={bridgestoneData} />
+        <DisplayCard
+          // onClick={router.push(`/Tires/${item.id}`)}
+          product={bridgestoneData}
+        />
       </main>
     </>
   );

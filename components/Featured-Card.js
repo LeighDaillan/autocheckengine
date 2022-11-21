@@ -14,9 +14,9 @@ const FeaturedCard = function ({ product }) {
               height="600"
               alt="Item"
               priority
-              className="cursor-pointer transform transition duration-500 hover:scale-75 h-60"
+              className="transform transition duration-500 hover:scale-75 h-60"
             />
-            <h2 className="text-sm cursor-pointer my-2 text-gray-600 hover:text-black hover:underline ">
+            <h2 className="text-sm my-2 text-gray-600 hover:text-black ">
               {item.name}
             </h2>
             <p className="text-lg">₱ {item.price.toLocaleString("en-US")}.00</p>

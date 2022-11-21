@@ -9,8 +9,8 @@ const Michelin = function ({ MichelinData }) {
         width="750"
         height="205"
         priority
-        alt="Bridgestone Logo"
-        className="mx-auto my-8"
+        alt="Michelin Logo"
+        className="mx-auto my-8 w-auto h-48"
       />
 
       <main className="max-w-7xl mx-auto grid gap-5 grid-cols-4 mb-20">

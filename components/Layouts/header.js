@@ -5,19 +5,23 @@ import Tires from "./Dropdown/tires";
 import Wheels from "./Dropdown/wheels";
 import Maintenance from "./Dropdown/maintenance";
 import PartsAccecssories from "./Dropdown/parts-accessories";
+import { useRouter } from "next/router";
 
 const Header = function () {
+  const router = useRouter();
   return (
     <nav className="grid grid-cols-2 lg:grid-cols-6 bg-white py-5 px-20 border-b">
       {/* Logo Design */}
 
       <div className="pl-10">
         <Image
+          onClick={() => router.push("/")}
           src="https://autocheckengine.vercel.app/_next/image?url=%2Fimages%2Fauto-check-engine-logo.jpg&w=96&q=75"
           width="75"
           height="75"
           className="cursor-pointer w-auto h-auto"
           alt="logo"
+          priority
         />
       </div>
 
