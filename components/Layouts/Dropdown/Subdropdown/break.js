@@ -1,6 +1,7 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import styles from "../../../../styles/Header.module.css";
+import Link from "next/link";
 
 const Break = function () {
   const [openBreak, setOpenBreak] = useState(false);
@@ -14,8 +15,12 @@ const Break = function () {
         {openBreak ? <BsChevronUp size={15} /> : <BsChevronDown size={15} />}
       </div>
       <ul className={`bg-white mt-2 px-5 ${openBreak ? "relative" : "hidden"}`}>
-        <li className={styles.link_hover}>Break Fluid</li>
-        <li className={styles.link_hover}>Break Pad</li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Break/break-fluid">Break Fluid</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Break/break-pad">Break Pad</Link>
+        </li>
       </ul>
     </>
   );

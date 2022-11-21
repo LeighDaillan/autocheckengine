@@ -1,6 +1,7 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import styles from "../../../../styles/Header.module.css";
+import Link from "next/link";
 
 const Engine = function () {
   const [openEngine, setOpenEngine] = useState(false);
@@ -16,10 +17,18 @@ const Engine = function () {
       <ul
         className={`bg-white mt-2 px-5 ${openEngine ? "relative" : "hidden"}`}
       >
-        <li className={styles.link_hover}>Additive</li>
-        <li className={styles.link_hover}>Engine Oil</li>
-        <li className={styles.link_hover}>Gear Oil</li>
-        <li className={styles.link_hover}>Battery</li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Engine/additive">Additive</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Engine/engine-oil">Engine Oil</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Engine/gear-oil">Gear Oil</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Maintenance/Engine/battery">Battery</Link>
+        </li>
       </ul>
     </>
   );

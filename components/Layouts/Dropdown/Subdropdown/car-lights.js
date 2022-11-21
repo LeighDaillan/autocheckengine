@@ -1,6 +1,7 @@
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { useState } from "react";
 import styles from "../../../../styles/Header.module.css";
+import Link from "next/link";
 
 const CarLights = function () {
   const [openCarLights, setOpenCarLights] = useState(false);
@@ -22,9 +23,17 @@ const CarLights = function () {
           openCarLights ? "relative" : "hidden"
         }`}
       >
-        <li className={styles.link_hover}>CARMATE Light</li>
-        <li className={styles.link_hover}>HELLA</li>
-        <li className={styles.link_hover}>COBRA</li>
+        <li className={styles.link_hover}>
+          <Link href="/Parts-and-Accessories/Car-Lights/carmate-light">
+            CARMATE Light
+          </Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Parts-and-Accessories/Car-Lights/hella">HELLA</Link>
+        </li>
+        <li className={styles.link_hover}>
+          <Link href="/Parts-and-Accessories/Car-Lights/cobra">COBRA</Link>
+        </li>
       </ul>
     </>
   );
