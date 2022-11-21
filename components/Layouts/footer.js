@@ -11,32 +11,8 @@ import styles from "../../styles/Layout.module.css";
 const Footer = function () {
   return (
     <footer className="bg-black text-white h-auto px-24 py-8">
-      <div className="grid grid-cols-2 h-36">
-        <div className=" grid grid-cols-2 md:grid-cols-3 gap-3 ">
-          <div>
-            <h3 className="text-xl mb-2">Auto Check Engine</h3>
-          </div>
-          <div>
-            <ul>
-              <li>
-                <Link href="/Men">Men</Link>
-              </li>
-              <li>
-                <Link href="/Women">Women</Link>
-              </li>
-              <li>
-                <Link href="/Kid">Kids</Link>
-              </li>
-              <li>
-                <Link href="/SNKRS">SNKRS</Link>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="font-bold">Account</h4>
-            <h4 className="font-bold">Basket</h4>
-          </div>
-        </div>
+      <div className=" grid grid-cols-2 gap-3 ">
+        <h3 className="text-xl mb-2">Auto Check Engine</h3>
 
         <div className="text-black flex justify-self-end">
           <div className={styles.icon_hover}>

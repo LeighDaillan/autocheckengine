@@ -1,11 +1,14 @@
 import Image from "next/image";
 
 const DisplayCard = function ({ product }) {
+  const addToCart = function (id) {
+    console.log(id);
+  };
   return (
     <>
       {Object.values(product).map((item) => {
         return (
-          <div key={item.price} className="bg-white p-5 border">
+          <div key={item.id} className="bg-white p-5 border">
             <Image
               src={item.displayImage}
               width="600"
@@ -19,7 +22,10 @@ const DisplayCard = function ({ product }) {
             </h2>
             <p className="text-lg">₱ {item.price.toLocaleString("en-US")}.00</p>
             <div className="flex ">
-              <button className="my-3 border text-gray-500 border-gray-500 py-3 w-full text-base hover:text-black hover:border-black hover:border-2 transform transition duration-500 ">
+              <button
+                onClick={() => addToCart(item.id)}
+                className="my-3 border text-gray-500 border-gray-500 py-3 w-full text-base hover:text-black hover:border-black hover:border-2 transform transition duration-500 "
+              >
                 Add To Cart
               </button>
             </div>

@@ -19,7 +19,7 @@ const FeaturedCard = function ({ product }) {
             <h2 className="text-sm cursor-pointer my-2 text-gray-600 hover:text-black hover:underline ">
               {item.name}
             </h2>
-            <p className="text-lg">₱ {item.price}.00</p>
+            <p className="text-lg">₱ {item.price.toLocaleString("en-US")}.00</p>
           </div>
         );
       })}

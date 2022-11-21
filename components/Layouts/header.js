@@ -14,8 +14,8 @@ const Header = function () {
       <div className="pl-10">
         <Image
           src="https://autocheckengine.vercel.app/_next/image?url=%2Fimages%2Fauto-check-engine-logo.jpg&w=96&q=75"
-          width="65"
-          height="65"
+          width="75"
+          height="75"
           className="cursor-pointer w-auto h-auto"
           alt="logo"
         />
