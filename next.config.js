@@ -5,6 +5,6 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["autocheckengine.vercel.app"],
+    domains: ["autocheckengine.vercel.app", "cdn.shopify.com"],
   },
 };
