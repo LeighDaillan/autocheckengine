@@ -3,7 +3,7 @@
     "Engine": {
       "Additive": [
         {
-          "id": "EA1",
+          "id": "MEA1",
           "name": "Pro-99 AdBlue Diesel Exhaust Fluid 10L",
           "price": 660,
           "description": "Ultrapure formaldehyde-free Nitrogen Oxide reducing treatment specifically formulated for diesel engines equipped with Selective Catalytic Reduction (SCR). SCR meets the new 2010 Vehicle Emission Standards for diesel engines. Pro-99 Adblue Diesel Exhaust Fluid 10 Liters PN#PDEF-10 meets stringentAUS 32, DIN 70070 ISO2241 purity and concentration standards. A safe and environmentally-friendly solution for Selective Catalytic Reduction.",
@@ -13,7 +13,7 @@
           ]
         },
         {
-          "id": "EA2",
+          "id": "MEA2",
           "name": "Pro 99 Oil Treatment",
           "price": 139,
           "description": "Restores engine efficiency by reducing wear and tear.Optimizes fuel economy for all users with all types of motor/engine oils",
@@ -23,7 +23,7 @@
           ]
         },
         {
-          "id": "EA3",
+          "id": "MEA3",
           "name": "Pro 99 Motor Flush / Engine Flush 443ml",
           "price": 141,
           "description": "Dissolves power-robbing sludge. Neutralizes acid contamination. Accelerates oil change procedure. Restore engine power and responsiveness. Restores fuel efficiency. Suitable for gas ans diesel engines",
@@ -33,7 +33,7 @@
           ]
         },
         {
-          "id": "EA4",
+          "id": "MEA4",
           "name": "Motul Stabilizer 250ml",
           "price": 1250,
           "description": "Fuel preservation additive. Protects all types of gasoline fuel against oxidation and avoids deposits build ups. Easier start after wintering",
@@ -43,7 +43,7 @@
       ],
       "EngineOil": [
         {
-          "id": "EE1",
+          "id": "MEE1",
           "name": "AMSOIL European Car Formula 5W40 Improved ESP Synthetic Motor Oil 1 Quart",
           "price": 760,
           "description": "AMSOIL European Car Formula Synthetic Motor Oil provides exceptional performance and protection for gasoline and diesel European vehicles. It meets a wide variety of specifications and carries multiple manufacturer approvals. European Car Formula features a broad range of viscosities and different levels of emissions system protection to keep sensitive emissions systems operating efficiently.",
@@ -51,7 +51,7 @@
           "images": []
         },
         {
-          "id": "EE2",
+          "id": "MEE2",
           "name": "AMSOIL 5W40 Max-Duty Synthetic Diesel Oil 1 Gallon",
           "price": 2835,
           "description": "Wear on rings and cylinder liners leads to increased oil consumption and loss of compression, resulting in reduced horsepower and fuel economy. Independent testing shows AMSOIL Signature Series Max-Duty delivers 6X more wear protection than required by the Detroit Diesel DD13 Scuffing Test for Specification DFS 93K222, delivering the Car Alarm / Sensors of providing your diesel the extra protection it deserves. Using top-tier synthetic base Engine Oil, AMSOIL Signature Series Max-Duty is naturally resistant to oxidation and the thickening effects of soot contamination. That, along with boosted detergent/dispersant additives, keeps soot particles suspended independently, helping prevent the formation of larger, wear-causing particles. Viscosity increase is minimized and soot-related wear is controlled. Lower volatility also helps Signature Series Max-Duty retain its viscosity after high-temperature service for maximum engine protection and efficiency.",
@@ -59,7 +59,7 @@
           "images": []
         },
         {
-          "id": "EE3",
+          "id": "MEE3",
           "name": "ACDelco 5W-40 Fully Synthetic Dexos2 Engine Oil (Diesel) API CJ-4 1 Liter",
           "price": 510,
           "description": "Formulated for improved fuel economy and to provide engine protection and performance. Designed for use with a high-performance diesel common rail engine, it meets dexos2 and exceeds API CJ-4 standards.",
@@ -67,7 +67,7 @@
           "images": []
         },
         {
-          "id": "EE4",
+          "id": "MEE4",
           "name": "ACDelco Supreme 15W-40 Synthetic Blend Engine Oil (Diesel) API C-I4 1 Liter",
           "price": 330,
           "description": "Meets API CI-4/SL and JASO DH-1 standards. Formulated with high performance hydrocracked base oil and selected synthetic base fluids. It is designed to maintain the viscosity grade and provide an ultimate protection with its high detergent and dispersant properties.",
@@ -79,7 +79,7 @@
       ],
       "GearOil": [
         {
-          "id": "EG1",
+          "id": "MEG1",
           "name": "MAG1 ATF Dexron III/Mercon 1 Gal",
           "price": 1250,
           "description": "MAG1 ATF DEXRON® III/MERCON ® is a premium quality product formulated of extreme high quality base stocks and technologically advanced additive system to give excellent performance and helps provide extended transmission life. It is a high quality friction modified lubricant certified by both General Motors and Ford. It provides superior flow characteristics at low temperatures and guards against oxidation, varnish and sludge at operating temperatures",
@@ -87,7 +87,7 @@
           "images": []
         },
         {
-          "id": "EG2",
+          "id": "MEG2",
           "name": "MAG1 Gear Oil - Manual Transmission GL-5 85W-140 1 Gal",
           "price": 1607,
           "description": "MAG 1 High Performance Gear Engine Oil are specially formulated with only the finest quality, hydrotreated, high viscosity index, paraffinic based Engine Oil and the most advanced and rigorously-tested additive system to deliver unsurpassed protection and performance. Exceptional protection against spalling and other wear, especially under extreme heat, pressure and torque operation, ensures long equipment life. Maintains viscosity, even under extreme operating temperatures, resulting in longer fluid life and reduced operating costs. Prevents acid formation for superior protection against rust and corrosion.",
@@ -95,7 +95,7 @@
           "images": []
         },
         {
-          "id": "EG3",
+          "id": "MEG3",
           "name": "MAG1 Gear Oil - Manual Transmission GL-5 75W-140 Full Synthetic 946ml",
           "price": 876,
           "description": "Formulated with 100% synthetic base Engine Oil to provide superior gear protection over a wide range of operating and ambient temperatures. Formulated with premium extreme pressure additives, rust preventatives, and anti-foam additives to protect hypoid gears, manual transmissions, gear boxes, passenger car and light truck conventional differentials, transmissions and steering gears.",
@@ -103,7 +103,7 @@
           "images": []
         },
         {
-          "id": "EG4",
+          "id": "MEG4",
           "name": "ACDelco Gear Oil 85W-140 1 Liter",
           "price": 420,
           "description": "Extra high performance, automotive gear lubricant formulated with an advanced additive system specifically for limited-slip differentials. Recommended by ACDelco for use in applications requiring API GL-5 performance such as heavy-duty differentials, axles, and final drives where extreme pressures and shock loading are expected.",
@@ -113,7 +113,7 @@
       ],
       "Battery": [
         {
-          "id": "EB1",
+          "id": "MEB1",
           "name": "ACDelco SMF S115D31RBH / N70 / 3SMR Car Battery",
           "price": 9500,
           "description": [
@@ -127,7 +127,7 @@
           "images": []
         },
         {
-          "id": "EB2",
+          "id": "MEB2",
           "name": "ACDelco AGM Battery - DIN74 (BCI 48 / DIN H6 / L3 )",
           "price": 16200,
           "description": [
@@ -141,7 +141,7 @@
           "images": []
         },
         {
-          "id": "EB3",
+          "id": "MEB3",
           "name": "ACDelcoEFB Battery - DIN88 (BCI 49 / DIN H8 / L5 )",
           "price": 11500,
           "description": [
@@ -155,7 +155,7 @@
           "images": []
         },
         {
-          "id": "EB4",
+          "id": "MEB4",
           "name": "ACDelco EFB Battery - 2SM",
           "price": 9600,
           "description": [
@@ -173,7 +173,7 @@
     "Break": {
       "BreakFluid": [
         {
-          "id": "BBF1",
+          "id": "MBBF1",
           "name": "PRO-99 Fast Brake High-Grade DOT3 Brake Fluid 500ml",
           "price": 180,
           "description": [
@@ -187,7 +187,7 @@
           "images": []
         },
         {
-          "id": "BBF2",
+          "id": "MBBF2",
           "name": "PRO-99 Fast Brake High-Grade DOT3 Brake Fluid 1L",
           "price": 330,
           "description": [
@@ -201,7 +201,7 @@
           "images": []
         },
         {
-          "id": "BBF3",
+          "id": "MBBF3",
           "name": "PRO-99 Fast Brake High-Grade DOT-4 Brake Fluid (500 ml.)",
           "price": 220,
           "description": [
@@ -215,7 +215,7 @@
           "images": []
         },
         {
-          "id": "BB4F",
+          "id": "MBBF4",
           "name": "PRO-99 Fast Brake High-Grade DOT-4 Brake Fluid (1L)",
           "price": 404,
           "description": [
@@ -231,7 +231,7 @@
       ],
       "BreakPad": [
         {
-          "id": "BBP1",
+          "id": "MBBP1",
           "name": "ACDelco Brakes Kia Picanto 2011 - 2017 | Front",
           "price": 1780,
           "description": "ACDelco Disc Brakes are an ideal choice when it comes to quiet, confident braking.",
@@ -241,7 +241,7 @@
           ]
         },
         {
-          "id": "BBP2",
+          "id": "MBBP2",
           "name": "ACDelco Brakes Kia Carens 2013 - 2016 | Front",
           "price": 2140,
           "description": "ACDelco Disc Brakes are an ideal choice when it comes to quiet, confident braking.",
@@ -251,7 +251,7 @@
           ]
         },
         {
-          "id": "BBP3",
+          "id": "MBBP3",
           "name": "ACDelco Brakess for Chevrolet Orlando | Front - 19371732",
           "price": 3600,
           "description": "ACDelco Disc Brakes are an ideal choice when it comes to quiet, confident braking.",
@@ -449,7 +449,7 @@
     "CarLights": {
       "CARMATELight": [
         {
-          "id": "CC1",
+          "id": "PACCL1",
           "name": "CARMATE Giga Golder LED H8/9/11/16 6500K",
           "price": 14999,
           "description": "Product name GOLDER 6500K H8 / 9/11/16 Color White (WHITE) Product weight 102g Product size H46 x W46 xD186 (mm) Package weight 745g Package size H170 x W130 x D90 (mm). LED Head & Fog Valve (H8 / H9 / H11 / H16 common type). Trust 'Made in Japan' Reliable. A total of two high-intensity compact LED chips are mounted for one bulb. Extremely high heat dissipation performance, high spec model raised the brightness performance of the LED chip to the limit. Luminescent color: 6500 K total luminous flux (per valve): 1850 lumens, vehicle inspection correspondence, hybrid car · idling stop car correspondence.",
@@ -457,7 +457,7 @@
           "images": []
         },
         {
-          "id": "CC2",
+          "id": "PACCL2",
           "name": "CARMATE Giga Yellow Power 2300K HB4/3",
           "price": 1999,
           "description": "Product Name YELLOW POWER 2300K HB4/3 55W Product color YELLOW Product Weight 24g Product Size H72xW36xD46(mm) Package Weight 130g Package Size H130xW106xD106(mm). The GIGA halogen bulb is a high quality halogen bulb series combining 'brightness' and 'beauty' that was developed with the concept of 'original shine'. Adopting high-grade crystal glass for all items, improving the durability of high efficiency halogen bulbs by adding optimum improvements for each valve type such as increasing the pressure of gas and increasing the strength of filaments!. Just by replacing with a genuine halogen bulb, you can enjoy tune-up to bright and beautiful irradiation light with excellent visibility.",
@@ -465,7 +465,7 @@
           "images": []
         },
         {
-          "id": "CC3",
+          "id": "PACCL3",
           "name": "CARMATE Giga Yellow Power 2300K H4",
           "price": 1999,
           "description": "Color yellow light (YELLOW) Product weight 23 g Product size H75xW43 x D 48 (mm) Package weight 128 g Package size H130xW106 x D 60 (mm). 'Very rare light' of the color temperature 2300 K which irradiates 'the darkest yellow light' with the luminescent color corresponding to the car inspection. Bright and powerful 'extreme yellow light' ensures outstanding visibility even in bad weather such as rain, fog, snow. Trust made in Japan, with one year warranty with Car Alarm / Sensors.",
@@ -473,7 +473,7 @@
           "images": []
         },
         {
-          "id": "CC4",
+          "id": "PACCL4",
           "name": "CARMATE Giga Yellow Power 2300K H11",
           "price": 1999,
           "description": "Product color YELLOW Product Weight 20g Product Size H63xW32xD40(mm) Package Weight 120g Package Size H130xW106xD106(mm). The GIGA halogen bulb is a high quality halogen bulb series combining 'brightness' and 'beauty' that was developed with the concept of 'original shine'. Adopting high-grade crystal glass for all items, improving the durability of high efficiency halogen bulbs by adding optimum improvements for each valve type such as increasing the pressure of gas and increasing the strength of filaments!. Just by replacing with a genuine halogen bulb, you can enjoy tune-up to bright and beautiful irradiation light with excellent visibility.",
@@ -483,7 +483,7 @@
       ],
       "HELLA": [
         {
-          "id": "CH1",
+          "id": "PACCH1",
           "name": "HELLA H3 Performance Bulb 12V (100w) 5000K",
           "price": 1159,
           "description": "HELLA Performance Bulbs are designed and engineered with a high quality standard, a result gained from our years of lighting expertise. See Better. Drive Safer. Light up your drive with HELLA Bulbs. HELLA's assortment of bulbs offers the right light for every requirement. With more than 100 years of lighting experience, HELLA bulbs are engineered to provide optimal illumination for your road ahead.",
@@ -491,7 +491,7 @@
           "images": []
         },
         {
-          "id": "CH2",
+          "id": "PACCH2",
           "name": "HELLA H4 Performance Bulb 12V (60/55w) 5000K",
           "price": 1299,
           "description": "HELLA Performance Bulbs are designed and engineered with a high quality standard, a result gained from our years of lighting expertise. See Better. Drive Safer. Light up your drive with HELLA Bulbs. HELLA's assortment of bulbs offers the right light for every requirement. With more than 100 years of lighting experience, HELLA bulbs are engineered to provide optimal illumination for your road ahead.",
@@ -501,7 +501,7 @@
       ],
       "COBRA": [
         {
-          "id": "CCO1",
+          "id": "PACCO1",
           "name": "COBRA Dark Breaker LED Heat Copper Sink Type H4 6000K",
           "price": 4600,
           "description": "Details: better penetration, higher visibility, bright light enhance light brightness, more open vision increase illumination distance instantly starts 100% brightness, no delay brightness:6000 lumens up to 7 times more more brightness than halogen low power consumption 24w long lifetime:low temperature when using extend the car headlight lifetime to 3x easy installation:no need to change the original car reflective cap",
@@ -513,7 +513,7 @@
     "DashCams": {
       "DDPAIDashcams": [
         {
-          "id": "DD1",
+          "id": "PADD1",
           "name": "DDPAI X2 Pro",
           "price": 1450,
           "description": "Features: with 32gb Micro SD Card Image Sensor: Front: 4 mega pixel / Rear: 1 mega pixel Video Resolution: Front: 1440P / Rear: 720P Viewing Angle: Front: 140o / Rear: 120o Aperture: Front: F/1.8 / Rear: F/2.2 Channel: Dual Camera Unit: Two (Front/Rear) Memory Card Support: Micro SD CLASS 10 up to 128gb Wi-Fi Module: Built-in 2.4 Ghz Operating Temperature: -20oC-70oC Battery Type: Capacitor Power Supply: Front: 12V / Rear: 5V Vehicle Hardwire kit: Optional 4G Accessory: Optional",
@@ -521,7 +521,7 @@
           "images": []
         },
         {
-          "id": "DD2",
+          "id": "PADD2",
           "name": "DDPAi X2S Pro 2CH Dual Wifi GPS QuadHD dashcam",
           "price": 11950,
           "description": "Front and rear HD camera, caring in all directions The DDPAI X2S Pro comes standard with two HD cameras that are connected via an IP digital link, achieves multiple mounting positions and angles. The cameras continuously record as soon as the car starts. You can watch live video, playback video, or download video through the mobile App's picture-in-picture by Wi-Fi connection without data traffic charges. The invisible guard of your car, with a 24-hour uninterrupted guardian Laminating with windshield, blending with the car perfectly. Integrating the cutting edge IPS power protection with D2SAVE dual-channel storage technology, comprehensively ensure safety for your car during driving or parking.",
@@ -532,7 +532,7 @@
           ]
         },
         {
-          "id": "DD3",
+          "id": "PADD3",
           "name": "DDPAI Mini 3",
           "price": 6950,
           "description": "The DDPai Mini3 is then award-winning Dash Cam from DDPai. The first Dash Cam with a Built-in 32G Storage NO NEED to buy an extra SD card! Built-in 10 Times Longer Lifespan, Faster reading and writing at 50MB/s making sure your video stored properly. The Mini3 features the first 1600P Car Camera with Super Night Vision 1600P // 1440P // 1080P options. 6 Layers Glasses Lens, F1.8 Aperture with equates to 20% more light capture than F2.0, making it easy to capture license plates.",
@@ -542,7 +542,7 @@
       ],
       "TRANSCEND": [
         {
-          "id": "DT1",
+          "id": "PADT1",
           "name": "TRANSCEND DrivePro 110 32GB",
           "price": 5799,
           "description": "Road safety is important. Transcend's DrivePro 110 dashcam utilizes a Sony image sensor to provide high-resolution images with extremely fine tonal gradation even in low light. In addition, the DrivePro 110 features a built-in battery, a handy snapshot button, emergency recording, headlight reminder, and driver fatigue alert.",
@@ -550,7 +550,7 @@
           "images": []
         },
         {
-          "id": "DT2",
+          "id": "PADT2",
           "name": "Transcend Dual Camera Dashcam DrivePro 620 32GB",
           "price": 14999,
           "description": "The DrivePro 620 is the ultimate pair of dashcams combining Transcend's DrivePro 250 as the front camera and DrivePro 10 as the rear camera. Featuring high-sensitivity STARVIS™ image sensors, it delivers crystal clear sharpness and night images even in low light. 1080P Full HD recording at 60fps ensures smooth image capture and clear critical shots. With built-in safety functions like a head-up display, emergency recording, and more, the DrivePro 620 is bound to protect your journey all around.",
