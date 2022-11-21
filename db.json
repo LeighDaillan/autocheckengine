@@ -41,7 +41,7 @@
           "images": []
         }
       ],
-      "Engine-Oil": [
+      "EngineOil": [
         {
           "id": "EE1",
           "name": "AMSOIL European Car Formula 5W40 Improved ESP Synthetic Motor Oil 1 Quart",
@@ -77,7 +77,7 @@
           ]
         }
       ],
-      "Gear-Oil": [
+      "GearOil": [
         {
           "id": "EG1",
           "name": "MAG1 ATF Dexron III/Mercon 1 Gal",
@@ -171,7 +171,7 @@
       ]
     },
     "Break": {
-      "Break-Fluid": [
+      "BreakFluid": [
         {
           "id": "BBF1",
           "name": "PRO-99 Fast Brake High-Grade DOT3 Brake Fluid 500ml",
@@ -197,7 +197,7 @@
             "Excellent thermal stability for consistent braking",
             "This product is a heavy-duty, non-petroleum based brake fluid specifically formulated to meet and exceed fluid requirements of the modern disc and drum hydraulic brake systems."
           ],
-          "displayImage": "https://cdn.shopify.com/s/files/1/0642/2600/1133/productt/PRO-99_FastBrake_High-Grade_DOT3_Brake_Fluid_500x_795704f3-307f-47bb-aaf5-55587bfa33b2.webp?v=1652112811",
+          "displayImage": "https://cdn.shopify.com/s/files/1/0642/2600/1133/products/PRO-99_FastBrake_High-Grade_DOT3_Brake_Fluid_500x_795704f3-307f-47bb-aaf5-55587bfa33b2.webp?v=1652112811",
           "images": []
         },
         {
@@ -229,7 +229,7 @@
           "images": []
         }
       ],
-      "Break-Pad": [
+      "BreakPad": [
         {
           "id": "BBP1",
           "name": "ACDelco Brakes Kia Picanto 2011 - 2017 | Front",
@@ -330,7 +330,7 @@
         "images": []
       }
     ],
-    "Toyo-Tires": [
+    "ToyoTires": [
       {
         "id": "TT1",
         "name": "Toyo Tires OPMT 285/75 R16",
@@ -434,7 +434,7 @@
         "images": []
       }
     ],
-    "OZ-Racing": [
+    "OZRacing": [
       {
         "id": "WO1",
         "name": "OZ Wheels Rally Racing 17'",
@@ -446,8 +446,8 @@
     ]
   },
   "Parts-and-Accessories": {
-    "Car-Lights": {
-      "CARMATE-Light": [
+    "CarLights": {
+      "CARMATELight": [
         {
           "id": "CC1",
           "name": "CARMATE Giga Golder LED H8/9/11/16 6500K",
@@ -510,8 +510,8 @@
         }
       ]
     },
-    "Dash-Cams": {
-      "DDPAI-Dashcams": [
+    "DashCams": {
+      "DDPAIDashcams": [
         {
           "id": "DD1",
           "name": "DDPAI X2 Pro",
