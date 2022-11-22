@@ -42,7 +42,7 @@ const Header = function () {
       </ul>
       {/* Basket, Orders, and Account */}
       <div className="flex justify-self-end self-center text-black mr-4 lg:col-span-2">
-        <Link href="/">
+        <Link href="/Basket">
           <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
             <BsBagDash size="25" className="mr-1" />
             <p className="text-lg">Basket</p>
