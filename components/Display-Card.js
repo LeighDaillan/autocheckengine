@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const DisplayCard = function ({ product }) {
   const router = useRouter();
@@ -38,19 +39,38 @@ const DisplayCard = function ({ product }) {
     }
   };
 
-  const addToCart = function (item) {
-    // check if local storage exist
-    if (!localStorage.getItem("autoCheckBasket")) {
-      // if theres no autoCheckBasket in localstorage create one
-      localStorage.setItem("autoCheckBasket", JSON.stringify(basket));
-    }
-    // Add item in local storage
-    basket = [...basket, item];
-
-    // Add item in local storage
+  // Setting local storage
+  const setLocalStorage = function () {
     localStorage.setItem("autoCheckBasket", JSON.stringify(basket));
+  };
 
-    console.log(basket);
+  // getting data from local storage
+  const getLocalStorage = function () {
+    const dataBasket = JSON.parse(localStorage.getItem("autoCheckBasket"));
+    console.log(dataBasket);
+    if (!dataBasket) return;
+
+    basket = dataBasket;
+  };
+
+  useEffect(() => {
+    getLocalStorage();
+  });
+
+  // adding data in localstorage
+  const addToCart = function (item) {
+    // console.log(typeof basket);
+    basket.push(item);
+    setLocalStorage();
+
+    // animation
+    document.getElementById(`addButton${item.id}`).textContent =
+      "Added to Cart ✓";
+
+    setTimeout(() => {
+      document.getElementById(`addButton${item.id}`).textContent =
+        "Add to Cart";
+    }, 1000);
   };
   return (
     <>
@@ -75,9 +95,10 @@ const DisplayCard = function ({ product }) {
             <div className="flex ">
               <button
                 onClick={() => addToCart(item)}
+                id={`addButton${item.id}`}
                 className="my-3 border text-gray-500 border-gray-500 py-3 w-full text-base hover:text-black hover:border-black hover:border-2 transform transition duration-500 "
               >
-                Add to Basket
+                Add to Cart
               </button>
             </div>
           </div>
