@@ -48,13 +48,12 @@ const Header = function () {
             <p className="text-xl">Basket</p>
           </div>
         </Link>
-
-        <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
-          <BsPersonCircle size="25" className="mr-1" />
-          <p className="text-xl">
-            <Link href="/Account">Account</Link>
-          </p>
-        </div>
+        <Link href="/Account">
+          <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
+            <BsPersonCircle size="25" className="mr-1" />
+            <p className="text-xl">Account</p>
+          </div>
+        </Link>
       </div>
     </nav>
   );
