@@ -1,4 +1,5 @@
 import Image from "next/image";
+import AddToBasket from "../../../components/Add-Basket";
 
 const carLightsId = function ({ product }) {
   const item = product[0];
@@ -56,9 +57,7 @@ const carLightsId = function ({ product }) {
 
           {/* Add To Bag Button */}
           <div className="text-center my-5">
-            <button className="border  hover:text-black hover:border-black hover:border-4 transform transition duration-500 w-full py-5 rounded-sm text-xl ">
-              Add to Basket
-            </button>
+            <AddToBasket product={item} />
           </div>
         </section>
       </main>
