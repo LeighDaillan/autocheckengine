@@ -46,7 +46,7 @@ const BasketCard = function () {
               />
               <div className="flex flex-col self-center col-span-2 max-w-xl ml-5">
                 <h1 className="mb-1 text-xl">{basketItem.name}</h1>
-                <p className="text-sm line-clamp-3">{basketItem.description}</p>
+                <p className="text-sm line-clamp-2">{basketItem.description}</p>
                 <p className="text-xl my-5">
                   ₱ {basketItem.price.toLocaleString("en-US")}
                 </p>
