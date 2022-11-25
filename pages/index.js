@@ -64,7 +64,10 @@ export default function Home({ TiresData, MaintenanceData }) {
         </div>
         {/* View All */}
         <div className="flex">
-          <button className="mx-auto my-5 border border-gray-600 px-6 py-2 text-base text-gray-600 hover:border-2 hover:border-black hover:text-black">
+          <button
+            onClick={() => router.push("/Maintenance/Engine/additive")}
+            className="mx-auto my-5 border border-gray-600 px-6 py-2 text-base text-gray-600 hover:border-2 hover:border-black hover:text-black"
+          >
             View All
           </button>
         </div>
