@@ -65,7 +65,6 @@ const DisplayCard = function ({ product }) {
     // Redirect if not sign in
     if (!status) return router.push("/login");
 
-    // console.log(typeof basket);
     basket.push(item);
     setLocalStorage();
 
