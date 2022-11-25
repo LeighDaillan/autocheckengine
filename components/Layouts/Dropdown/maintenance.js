@@ -20,7 +20,7 @@ const Maintenance = function () {
         )}
       </div>
       <ul
-        className={`bg-white mt-2 border px-5 ${
+        className={`bg-white mt-2 border px-5 z-10 ${
           openMaintenance ? "absolute" : "hidden"
         }`}
       >

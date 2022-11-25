@@ -6,9 +6,9 @@ import { useRouter } from "next/router";
 export default function Home({ TiresData, MaintenanceData }) {
   const router = useRouter();
   return (
-    <main className="pb-10">
+    <main className=" m-0">
       {/* display section */}
-      <section className="grid grid-cols-2 py-10 px-20 bg-gray-100 ">
+      <section className="grid grid-cols-1 md:grid-cols-2 py-10 px-10 md:px-20 bg-gray-100 ">
         <div className="justify-self-center self-center px-10">
           <h1 className="text-5xl font-bold mb-3">Auto Check Engine</h1>
           <p className="text-xl">
@@ -17,7 +17,7 @@ export default function Home({ TiresData, MaintenanceData }) {
             voluptatum laborum numquam blanditiis harum quisquam.
           </p>
         </div>
-        <div className="max-w-xl bg-white rounded-xl">
+        <div className="max-w-xl bg-white rounded-xl mt-10 sm:mt-5">
           <Image
             src={engineImg}
             className="rounded-t-xl"
@@ -41,7 +41,7 @@ export default function Home({ TiresData, MaintenanceData }) {
       <section className="mt-10  max-w-7xl mx-auto px-10 py-5">
         <h1 className="text-4xl mb-7">Featured Bridgestone Tires</h1>
         {/* Card */}
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           <FeaturedCard product={TiresData.Bridgestone} />
         </div>
         {/* View All */}
@@ -59,7 +59,7 @@ export default function Home({ TiresData, MaintenanceData }) {
       <section className="mt-10  max-w-7xl mx-auto px-10 py-5">
         <h1 className="text-4xl mb-7">Featured Additives</h1>
         {/* Card */}
-        <div className="grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           <FeaturedCard product={MaintenanceData.Engine.Additive} />
         </div>
         {/* View All */}

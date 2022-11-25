@@ -15,7 +15,7 @@ const Wheels = function () {
         {openWheels ? <BsChevronUp size={15} /> : <BsChevronDown size={15} />}
       </div>
       <ul
-        className={`bg-white mt-2 border px-5 ${
+        className={`bg-white mt-2 border px-5 z-10 ${
           openWheels ? "absolute" : "hidden"
         }`}
       >

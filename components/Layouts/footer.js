@@ -11,7 +11,7 @@ import styles from "../../styles/Layout.module.css";
 const Footer = function () {
   return (
     <footer className="bg-black text-white h-auto px-24 py-8">
-      <div className=" grid grid-cols-2 gap-3 ">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-3 ">
         <h3 className="text-xl mb-2">Auto Check Engine</h3>
 
         <div className="text-black flex justify-self-end">

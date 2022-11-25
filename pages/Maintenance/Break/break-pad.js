@@ -4,9 +4,9 @@ const BreakPad = function ({ BreakPadData }) {
   return (
     <>
       <main className="max-w-7xl mx-auto">
-        <h1 className="my-10 text-5xl font-bold">Break Pad</h1>
+        <h1 className="my-10 mx-14 text-5xl font-bold">Break Pad</h1>
 
-        <section className="grid gap-5 grid-cols-4 mb-20">
+        <section className="grid mx-14 gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-20">
           <DisplayCard product={BreakPadData} />
         </section>
       </main>

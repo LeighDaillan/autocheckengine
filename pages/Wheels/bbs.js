@@ -10,10 +10,10 @@ const BBS = function ({ BBSData }) {
         height="168"
         priority
         alt="Bridgestone Logo"
-        className="mx-auto my-8 h-auto w-auto"
+        className="mx-14 sm:mx-auto my-8 h-auto w-auto"
       />
 
-      <main className="max-w-7xl mx-auto grid gap-5 grid-cols-4 mb-20">
+      <main className="max-w-7xl mx-14 lg:mx-auto grid gap-5 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mb-20">
         <DisplayCard product={BBSData} />
       </main>
     </>

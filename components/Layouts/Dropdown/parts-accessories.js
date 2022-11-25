@@ -12,7 +12,7 @@ const PartsAccecssories = function () {
         onClick={() => setOpenPartsAccecssories(!openPartsAccecssories)}
         className={styles.link_dropdown}
       >
-        <p className="text-lg mr-3">Parts and Accessories</p>
+        <p className="text-lg mr-3">Parts & Accessories</p>
         {openPartsAccecssories ? (
           <BsChevronUp size={15} />
         ) : (
@@ -20,7 +20,7 @@ const PartsAccecssories = function () {
         )}
       </div>
       <ul
-        className={`bg-white mt-2 border px-5 ${
+        className={`bg-white mt-2 border px-5 z-10 ${
           openPartsAccecssories ? "absolute" : "hidden"
         }`}
       >

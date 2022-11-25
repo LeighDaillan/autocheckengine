@@ -1,5 +1,5 @@
 .link_dropdown {
-  @apply cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded;
+  @apply cursor-pointer hover:underline text-gray-600 hover:text-black  px-2 flex items-center justify-between rounded bg-white z-10;
 }
 
 .link_hover {
