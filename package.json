@@ -10,14 +10,22 @@
     "start-server": "json-server --watch ./db.json --port 4000"
   },
   "dependencies": {
+    "@stripe/stripe-js": "^1.44.1",
     "@tailwindcss/line-clamp": "^0.4.2",
+    "axios": "^1.2.0",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
+    "formik": "^2.2.9",
+    "mongoose": "^6.7.2",
     "next": "13.0.4",
+    "next-auth": "^4.17.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
-    "react-responsive-carousel": "^3.2.23"
+    "react-responsive-carousel": "^3.2.23",
+    "stripe": "^11.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",
