@@ -31,21 +31,6 @@ const BasketCheckout = function ({ basket }) {
           .reduce((preVal, curVal) => preVal + curVal)
           .toLocaleString("en-US");
 
-  let shippingFee;
-
-  // check if items for shipping cost
-  if (basket.length < 3 && basket.length >= 1) {
-    shippingFee = 1000;
-  } else if (basket.length === 3) {
-    shippingFee = 750;
-  } else if (basket.length > 3 && basket.length <= 5) {
-    shippingFee = 500;
-  } else if (basket.length > 5 && basket.length <= 8) {
-    shippingFee = 250;
-  } else {
-    shippingFee = 0;
-  }
-
   return (
     <>
       <h1 className="text-2xl font-bold mb-5">Summary</h1>
@@ -54,15 +39,11 @@ const BasketCheckout = function ({ basket }) {
         <span className="text-right"> ₱ {subTotal}</span>
         <p className="text-left">Total Items</p>
         <span className="text-right"> {basket.length} Items</span>
-        <p className="text-left">Estimated Delivery Fee</p>
-        <span className="text-right">
-          ₱ {!shippingFee ? 0 : shippingFee.toLocaleString("en-US")}
-        </span>
       </div>
 
       <h2 className="my-5 text-xl font-bold">
         Total: ₱&nbsp;
-        {(+subTotal.replaceAll(",", "") + shippingFee).toLocaleString("en-US")}
+        {subTotal}
       </h2>
 
       <button
