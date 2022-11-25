@@ -44,13 +44,12 @@ const BasketCard = function () {
                 alt="Basket Item"
                 priority
               />
-              <div className="flex flex-col self-center  max-w-xl ml-5">
-                <h1 className="mb-1 text-lg">{basketItem.name}</h1>
-                <p className="text-xl mt-5">
+              <div className="flex flex-col self-center col-span-2 max-w-xl ml-5">
+                <h1 className="mb-1 text-xl">{basketItem.name}</h1>
+                <p className="text-sm line-clamp-3">{basketItem.description}</p>
+                <p className="text-xl my-5">
                   ₱ {basketItem.price.toLocaleString("en-US")}
                 </p>
-              </div>
-              <div className="flex flex-col justify-center  w-full">
                 <button
                   onClick={() => removeItemFromBasket(basketItem.id)}
                   className="border-2 border-gray-300 px-3 py-2 rounded-sm  duration-300 hover:bg-red-600 hover:text-white text-sm"
