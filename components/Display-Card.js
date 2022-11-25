@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useSession } from "next-auth/react";
 
 const DisplayCard = function ({ product }) {
+  const { data: status } = useSession();
+
   const router = useRouter();
 
   let basket = [];
@@ -59,17 +62,20 @@ const DisplayCard = function ({ product }) {
 
   // adding data in localstorage
   const addToCart = function (item) {
+    // Redirect if not sign in
+    if (!status) return router.push("/login");
+
     // console.log(typeof basket);
     basket.push(item);
     setLocalStorage();
 
     // animation
     document.getElementById(`addButton${item.id}`).textContent =
-      "Added to Cart ✓";
+      "Added to Basket ✓";
 
     setTimeout(() => {
       document.getElementById(`addButton${item.id}`).textContent =
-        "Add to Cart";
+        "Add to Basket";
     }, 1000);
   };
   return (
@@ -98,7 +104,7 @@ const DisplayCard = function ({ product }) {
                 id={`addButton${item.id}`}
                 className="my-3 border text-gray-500 border-gray-500 py-3 w-full text-base hover:text-black hover:border-black hover:border-2 transform transition duration-500 "
               >
-                Add to Cart
+                {!status ? "Sign in to Buy" : "Add to Basket"}
               </button>
             </div>
           </div>
