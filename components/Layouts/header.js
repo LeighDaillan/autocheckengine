@@ -57,7 +57,9 @@ const Header = function () {
 
         <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
           <BsPersonCircle size="25" className="mr-1" />
-          <p className="text-lg">Account</p>
+          <p className="text-lg">
+            <Link href="/Account">Account</Link>
+          </p>
         </div>
       </div>
     </nav>
