@@ -27,8 +27,6 @@ export default async (req, res) => {
     },
   }));
 
-  console.log(transformedItems);
-
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ["card"],
     shipping_address_collection: {
@@ -36,7 +34,7 @@ export default async (req, res) => {
     },
     line_items: transformedItems,
     mode: "payment",
-    success_url: "http://localhost:3000/success",
+    success_url: "http://localhost:3000/Success",
     cancel_url: "http://localhost:3000/Basket",
     metadata: {
       email,
