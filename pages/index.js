@@ -2,14 +2,21 @@ import Image from "next/image";
 import engineImg from "../public/carEngine.jpg";
 import FeaturedCard from "../components/Featured-Card";
 import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function Home({ TiresData, MaintenanceData }) {
   const router = useRouter();
+
+  // Scroll animation
+  const { ref: tiresRef, inView: tiresVisible } = useInView();
+  const { ref: additivesRef, inView: additivesVisible } = useInView();
+
   return (
     <main className=" m-0">
       {/* display section */}
       <section className="grid grid-cols-1 md:grid-cols-2 py-10 px-10 md:px-20 bg-gray-100 ">
-        <div className="justify-self-center self-center px-10">
+        <div className=" justify-self-center self-center px-10">
           <h1 className="text-5xl font-bold mb-3">Auto Check Engine</h1>
           <p className="text-xl">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
@@ -17,7 +24,7 @@ export default function Home({ TiresData, MaintenanceData }) {
             voluptatum laborum numquam blanditiis harum quisquam.
           </p>
         </div>
-        <div className="max-w-xl bg-white rounded-xl mt-10 sm:mt-5">
+        <div className=" max-w-xl bg-white rounded-xl mt-10 sm:mt-5">
           <Image
             src={engineImg}
             className="rounded-t-xl"
@@ -38,10 +45,15 @@ export default function Home({ TiresData, MaintenanceData }) {
       </section>
 
       {/* Tires Feature */}
-      <section className="mt-10  max-w-7xl mx-auto px-10 py-5">
-        <h1 className="text-4xl mb-7">Featured Bridgestone Tires</h1>
+      <section
+        ref={tiresRef}
+        className={`${
+          tiresVisible ? "showAnimation" : "hideAnimation"
+        }  mt-10  max-w-7xl mx-auto px-10 py-5`}
+      >
+        <h1 className="text-4xl mb-7">Feature Bridgestone</h1>
         {/* Card */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className=" grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           <FeaturedCard product={TiresData.Bridgestone} />
         </div>
         {/* View All */}
@@ -56,7 +68,12 @@ export default function Home({ TiresData, MaintenanceData }) {
       </section>
 
       {/* Maintenance Feature */}
-      <section className="mt-10  max-w-7xl mx-auto px-10 py-5">
+      <section
+        ref={additivesRef}
+        className={`${
+          additivesVisible ? "showAnimation" : "hideAnimation"
+        } mt-10  max-w-7xl mx-auto px-10 py-5`}
+      >
         <h1 className="text-4xl mb-7">Featured Additives</h1>
         {/* Card */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
