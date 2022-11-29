@@ -4,9 +4,12 @@ const stripePromise = loadStripe(process.env.stripe_public_key);
 import axios from "axios";
 
 const BasketCheckout = function ({ basket }) {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
 
   const createCheckoutSession = async function () {
+    // guard clause
+    if (basket.length === 0) return;
+
     const stripe = await stripePromise;
 
     const checkoutSession = await axios.post("/api/create-checkout-session", {
@@ -24,10 +27,10 @@ const BasketCheckout = function ({ basket }) {
   };
 
   const subTotal =
-    basket.length === 0
+    basket?.length === 0
       ? "0"
       : basket
-          .map((item) => item.price)
+          ?.map((item) => item.price)
           .reduce((preVal, curVal) => preVal + curVal)
           .toLocaleString("en-US");
 
@@ -38,7 +41,7 @@ const BasketCheckout = function ({ basket }) {
         <p className="text-left">Subtotal</p>
         <span className="text-right"> ₱ {subTotal}</span>
         <p className="text-left">Total Items</p>
-        <span className="text-right"> {basket.length} Items</span>
+        <span className="text-right"> {basket?.length} Items</span>
       </div>
 
       <h2 className="my-5 text-xl font-bold">

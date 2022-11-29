@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { BsBagDash, BsPersonCircle, BsBoxSeam } from "react-icons/bs";
@@ -6,9 +7,12 @@ import Wheels from "./Dropdown/wheels";
 import Maintenance from "./Dropdown/maintenance";
 import PartsAccecssories from "./Dropdown/parts-accessories";
 import { useRouter } from "next/router";
+import { CheckoutContext } from "../CheckoutContextProvider";
 
 const Header = function () {
+  const { user, currentBasketCount } = useContext(CheckoutContext);
   const router = useRouter();
+
   return (
     <nav
       className="sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5
@@ -46,15 +50,38 @@ const Header = function () {
       {/* Basket, Orders, and Account */}
       <div className="flex justify-self-end self-center text-black mr-4 md:col-span-2 lg:col-span-1  ">
         <Link href="/Basket">
-          <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
+          <div className="cursor-pointer mx-2 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
             <BsBagDash size="25" className="mr-1" />
-            <p className="text-lg">Basket</p>
+            <h1 className="text-lg">
+              Basket
+              <sup className="bg-black text-white rounded-full px-2 py-1 ml-1">
+                {currentBasketCount}
+              </sup>
+            </h1>
           </div>
         </Link>
+
         <Link href="/Account">
-          <div className="cursor-pointer mx-5 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
-            <BsPersonCircle size="25" className="mr-1" />
-            <p className="text-lg">Account</p>
+          <div className="cursor-pointer mx-2 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 w-28 rounded-lg">
+            {user ? (
+              <>
+                <Image
+                  src={user.user.image}
+                  width={25}
+                  height={10}
+                  alt={`Welcome Back: ${user.user.name}`}
+                  className="rounded-full w-auto h-8 mr-2"
+                />
+                <p className="text-lg font-bold">
+                  {user?.user.name.split(" ")[0]}
+                </p>
+              </>
+            ) : (
+              <>
+                <BsPersonCircle size="25" className="mr-1" />
+                <p className="text-lg">Account</p>
+              </>
+            )}
           </div>
         </Link>
       </div>

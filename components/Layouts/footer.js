@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import Link from "next/link";
 import {
   BsFillPinMapFill,
@@ -7,8 +8,10 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import styles from "../../styles/Layout.module.css";
+import { CheckoutContext } from "../CheckoutContextProvider";
 
 const Footer = function () {
+  const { user } = useContext(CheckoutContext);
   return (
     <footer className="bg-black text-white h-auto px-24 py-8">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-3 ">
