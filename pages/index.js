@@ -15,7 +15,7 @@ export default function Home({ TiresData, MaintenanceData }) {
   return (
     <main className=" m-0">
       {/* display section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 py-10 px-10 md:px-20 bg-gray-100 ">
+      <section className="bg-gray-200 grid  md:grid-cols-2 py-10 px-10 md:px-20  ">
         <div className=" justify-self-center self-center px-10">
           <h1 className="text-5xl font-bold mb-3">Auto Check Engine</h1>
           <p className="text-xl">
