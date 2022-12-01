@@ -5,47 +5,104 @@ import { useRouter } from "next/router";
 export const CheckoutContext = createContext();
 
 const CheckoutContextProvider = ({ ...props }) => {
-  const { data: status } = useSession();
-  const [currentBasketCount, setCurrentBasketCount] = useState(0);
+  const getLocalStorage = (name) => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem(name);
+    }
+  };
 
-  let basket = [];
+  const setLocalStorage = (name, value) => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem(name, value);
+    }
+  };
+
+  const { data: status } = useSession();
+
+  // let basket = [];
   const [basketItem, setBasketItem] = useState();
 
-  // Setting local storage
-  const setLocalStorage = function () {
-    localStorage.setItem("autoCheckBasket", JSON.stringify(basket));
-  };
+  const [checkout, setCheckout] = useState(() => {
+    const checkout = getLocalStorage("checkout");
+    return checkout
+      ? JSON.parse(checkout)
+      : {
+          count: 0,
+          items: {},
+        };
+  });
 
-  // getting data from local storage
-  const getLocalStorage = function () {
-    const dataBasket = JSON.parse(localStorage.getItem("autoCheckBasket"));
-    if (!dataBasket) return;
+  // Subtotal computation
+  const [checkoutSubtotal, setCheckoutSubtotal] = useState();
 
-    basket = dataBasket;
-  };
+  // Checkout total
+  const [basketCount, setBasketCount] = useState(2);
 
+  // Checkout Items in array
+  const [checkoutItems, setCheckoutItems] = useState(
+    Object.entries(checkout.items)?.map((v, key) => v[1])
+  );
+
+  // Listen if checkout state has been modified or tampered
   useEffect(() => {
-    getLocalStorage();
-    setBasketItem(JSON.parse(localStorage.getItem("autoCheckBasket")));
-    setCurrentBasketCount(
-      JSON.parse(localStorage.getItem("autoCheckBasket")).length
-    );
-  }, []);
+    if (checkout.items && typeof window !== "undefined") {
+      setLocalStorage("checkout", JSON.stringify(checkout));
+    }
+
+    // setting sub total amount of the items multipy in their qty
+    setCheckoutSubtotal(() => {
+      return Object.entries(checkout.items)
+        ?.map((v, key) => v[1])
+        .map((item) => {
+          return item.qty * item.price;
+        })
+        .reduce((preVal, curVal) => preVal + curVal)
+        .toLocaleString("en-US");
+    });
+
+    // setting items in basket
+    setBasketCount(checkout.count);
+
+    // setting items in array
+    setCheckoutItems(Object.entries(checkout.items)?.map((v, key) => v[1]));
+  }, [checkout.items, checkout.count]); // anything happen in the checkout state this useEffect will fire immediately
 
   // adding data in localstorage
   const addToBasket = function (item) {
     // Redirect if not sign in
     if (!status) return router.push("/login");
 
-    // Adding item in array
-    basket.push(item);
-    setLocalStorage();
+    let qty;
+    if (typeof checkout.items[item.id] === "undefined") {
+      qty = 1;
+    } else {
+      qty = parseInt(checkout.items[item.id].qty + 1);
+    }
 
-    // updating the basket item
-    setCurrentBasketCount(basket.length);
+    setCheckout((prevCheckout) => {
+      return {
+        ...prevCheckout,
+        items: {
+          ...prevCheckout.items,
+          [item.id]: {
+            ...item,
+            qty: qty,
+          },
+        },
+      };
+    });
 
-    // Passing the item in basket
-    setBasketItem(basket);
+    let total = 1;
+    Object.entries(checkout.items).map((item, index) => {
+      total += item[1].qty;
+    });
+
+    setCheckout((prevCheckout) => {
+      return {
+        ...prevCheckout,
+        count: total,
+      };
+    });
   };
 
   // Label Animation
@@ -118,9 +175,11 @@ const CheckoutContextProvider = ({ ...props }) => {
         addToBasket,
         labelAnimation,
         dynamicRouter,
-        currentBasketCount,
-        basketItem,
         removeItemFromBasket,
+        checkout,
+        checkoutSubtotal,
+        basketCount,
+        checkoutItems,
       }}
     >
       {props.children}
