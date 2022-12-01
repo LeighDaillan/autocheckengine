@@ -1,4 +1,5 @@
 import BasketCard from "../../components/Basket-Card";
+import BasketCheckout from "../../components/Basket-Checkout";
 
 const Basket = function () {
   return (
@@ -10,6 +11,9 @@ const Basket = function () {
           </h1>
         </section>
         <BasketCard />
+        <section className="text-center">
+          <BasketCheckout />
+        </section>
       </main>
     </>
   );
