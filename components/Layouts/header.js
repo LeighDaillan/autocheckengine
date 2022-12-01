@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BsBagDash, BsPersonCircle, BsBoxSeam } from "react-icons/bs";
+import { BsBagDash, BsPersonCircle } from "react-icons/bs";
 import Tires from "./Dropdown/tires";
 import Wheels from "./Dropdown/wheels";
 import Maintenance from "./Dropdown/maintenance";
@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import { CheckoutContext } from "../CheckoutContextProvider";
 
 const Header = function () {
-  const { user, currentBasketCount } = useContext(CheckoutContext);
+  const { user, basketCount } = useContext(CheckoutContext);
   const router = useRouter();
 
   return (
@@ -48,21 +48,21 @@ const Header = function () {
         </li>
       </ul>
       {/* Basket, Orders, and Account */}
-      <div className="flex justify-self-end self-center text-black mr-4 md:col-span-2 lg:col-span-1  ">
-        <Link href="/Basket">
-          <div className="cursor-pointer mx-2 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
+      <section className="flex justify-self-end self-center text-black mr-4 md:col-span-2 lg:col-span-1  ">
+        <div className="cursor-pointer mx-2 transform transition duration-500 p-2 hover:bg-gray-200 rounded-lg">
+          <Link href="/Basket" className="flex self-center">
             <BsBagDash size="25" className="mr-1" />
             <h1 className="text-lg">
               Basket
               <sup className="bg-black text-white rounded-full px-2 py-1 ml-1">
-                {currentBasketCount}
+                {basketCount}
               </sup>
             </h1>
-          </div>
-        </Link>
+          </Link>
+        </div>
 
-        <Link href="/Account">
-          <div className="cursor-pointer mx-2 flex self-center transform transition duration-500 p-2 hover:bg-gray-200 w-28 rounded-lg">
+        <div className="cursor-pointer mx-2 transform transition duration-500 p-2 hover:bg-gray-200 w-28 rounded-lg">
+          <Link href="/Account" className="flex self-center">
             {user ? (
               <>
                 <Image
@@ -82,9 +82,9 @@ const Header = function () {
                 <p className="text-lg">Account</p>
               </>
             )}
-          </div>
-        </Link>
-      </div>
+          </Link>
+        </div>
+      </section>
     </nav>
   );
 };
