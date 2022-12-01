@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
-import BasketCheckout from "/components/Basket-Checkout";
 import { CheckoutContext } from "./CheckoutContextProvider";
 
 const BasketCard = function () {
