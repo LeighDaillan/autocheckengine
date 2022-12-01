@@ -1,15 +1,22 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import Image from "next/image";
 import BasketCheckout from "/components/Basket-Checkout";
 import { CheckoutContext } from "./CheckoutContextProvider";
 
 const BasketCard = function () {
-  const { basketItem, removeItemFromBasket } = useContext(CheckoutContext);
+  const { removeItemFromBasket, checkout } = useContext(CheckoutContext);
+
+  const [checkoutItems, setCheckoutItems] = useState();
+  useEffect(() => {
+    setCheckoutItems(() => {
+      return Object.entries(checkout.items)?.map((v, key) => v[1]);
+    });
+  }, [checkout.items]);
 
   return (
     <>
       <section className="col-span-2">
-        {basketItem?.map((basket) => {
+        {checkoutItems?.map((basket) => {
           return (
             <div
               key={Math.random()}
@@ -29,6 +36,7 @@ const BasketCard = function () {
                 <p className="text-xl my-5">
                   ₱ {basket.price.toLocaleString("en-US")}
                 </p>
+                <p className="text-sm mb-2">QTY: {basket.qty}</p>
                 <button
                   onClick={() => removeItemFromBasket(basket.id)}
                   className="border-2 border-gray-300 px-3 py-2 rounded-sm  duration-300 hover:bg-red-600 hover:text-white text-sm"
@@ -39,9 +47,6 @@ const BasketCard = function () {
             </div>
           );
         })}
-      </section>
-      <section className="text-center">
-        <BasketCheckout basket={basketItem} />
       </section>
     </>
   );
