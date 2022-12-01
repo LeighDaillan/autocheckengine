@@ -38,7 +38,7 @@ const BasketCard = function () {
                 </p>
                 <p className="text-sm mb-2">QTY: {basket.qty}</p>
                 <button
-                  onClick={() => removeItemFromBasket(basket.id)}
+                  onClick={() => removeItemFromBasket(basket)}
                   className="border-2 border-gray-300 px-3 py-2 rounded-sm  duration-300 hover:bg-red-600 hover:text-white text-sm"
                 >
                   Remove From Basket
