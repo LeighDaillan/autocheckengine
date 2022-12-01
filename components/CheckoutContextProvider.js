@@ -51,13 +51,15 @@ const CheckoutContextProvider = ({ ...props }) => {
 
     // setting sub total amount of the items multipy in their qty
     setCheckoutSubtotal(() => {
-      return Object.entries(checkout.items)
-        ?.map((v, key) => v[1])
-        .map((item) => {
-          return item.qty * item.price;
-        })
-        .reduce((preVal, curVal) => preVal + curVal)
-        .toLocaleString("en-US");
+      return Object.keys(checkout.items).length !== 0
+        ? Object.entries(checkout.items)
+            ?.map((v, key) => v[1])
+            ?.map((item) => {
+              return item.qty * item.price;
+            })
+            .reduce((preVal, curVal) => preVal + curVal)
+            .toLocaleString("en-US")
+        : 0;
     });
 
     // setting items in basket
@@ -149,23 +151,32 @@ const CheckoutContextProvider = ({ ...props }) => {
   };
 
   // Remove Handler
-  const removeItemFromBasket = function (id) {
-    // index of the item that will remove
-    const index = basket.findIndex((basketItem) => basketItem.id === id);
-
-    // Setting new array of basket
-    let newBasket = [...basket];
-
-    // removing item from the array
-    newBasket.splice(index, 1);
-
-    // setting new basket in local storage
-    localStorage.setItem("autoCheckBasket", JSON.stringify(newBasket));
-
-    // rendering the new basket
-    setBasketItem(newBasket);
-
-    setCurrentBasketCount(newBasket.length);
+  const removeItemFromBasket = function (item) {
+    // If item has more than 1 qty minus 1
+    if (checkout.items[item.id].qty > 1) {
+      return setCheckout((prevCheckout) => {
+        return {
+          count: parseInt(prevCheckout.count - 1),
+          items: {
+            ...prevCheckout.items,
+            [item.id]: {
+              ...item,
+              qty: parseInt(checkout.items[item.id].qty - 1),
+            },
+          },
+        };
+      });
+    } else {
+      setCheckout((prevCheckout) => {
+        delete prevCheckout.items[item.id];
+        return {
+          count: parseInt(prevCheckout.count - 1),
+          items: {
+            ...prevCheckout.items,
+          },
+        };
+      });
+    }
   };
 
   return (
