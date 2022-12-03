@@ -1,7 +1,4 @@
 import { useContext } from "react";
-import { useState, useEffect } from "react";
-import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
 import { CheckoutContext } from "./CheckoutContextProvider";
 
 const AddToBasket = function ({ product }) {
