@@ -109,6 +109,9 @@ const CheckoutContextProvider = ({ ...props }) => {
 
   // Label Animation
   const labelAnimation = function (id) {
+    // Redirect if not sign in
+    if (!status) return;
+
     // animation
     document.getElementById(`addButton${id}`).textContent = "Added to Basket ✓";
 
